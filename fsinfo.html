@@ -44,6 +44,7 @@
     <header class="mast">
       <!-- <div class="kicker">Infographic • Fourier Synthesis</div> -->
       <h1 class="title">Underwater Acoustic Time Series Simulation using Fourier Synthesis</h1>
+      <p class="subtitle">Infographic by Finley Boulton (sgfboult@liverpool.ac.uk)</p>
       <p class="subtitle">Real sonar time series data is limited and hard to come by, therefor an accurate means to simulate it is crucial. This infographic is presented alongside a poster and contains further details, examples and a means to listen to the results.</p>
     </header>
 
@@ -65,8 +66,46 @@
       </ul>
     </section>
 
+    <section class="section" id="fourier-synthesis">
+        <div class="h"><div class="num">3</div><span>Fourier Synthesis Method</span></div>
+        <ul class="list">
+            <li class="li"><div class="dot"></div><div>
+                <strong>Step 1:</strong> Apply Fourier transform to the source time series to obtain its frequency components <em>S(f)</em>.
+            </div></li>
+            <li class="li"><div class="dot"></div><div>
+                <strong>Step 2:</strong> For each frequency, compute pressure <em>H(f)</em> using an acoustic model.
+            </div></li>
+            <li class="li"><div class="dot"></div><div>
+                <strong>Step 3:</strong> Compute the received frequency components by multiplying source and propagation: <em>p(f) = S(f) · H(f)</em>.
+            </div></li>
+            <li class="li"><div class="dot"></div><div>
+                <strong>Step 4:</strong> Reconstruct the received time series <em>p(t)</em> via the inverse Fourier transform.
+            </div></li>
+
+        <li>
+            <div>
+            <strong>Equations:</strong>
+            <figure style="display:flex; justify-content:center; background:#fff; margin-top:10px;">
+                <img src="assets/fs_eqn.png" alt="Fourier Synthesis Equation" style="max-width:420px; width:40%; border-radius:0px;">
+            </figure>
+            </div>
+        </li>
+        <p class="muted">
+            This approach efficiently simulates complex propagation effects and multipath arrivals, producing realistic time-domain signals for underwater acoustics.
+        </p>
+    </section>
+
     <section class="section" id="examples">
-      <div class="h"><div class="num">3</div><span>Examples</span></div>
+
+      <div class="h"><div class="num">4</div><span>Examples</span></div>
+      <p class="muted">Four examples are presented:</p>
+      <ul class="list"></ul>
+            <li class="li"><div class=""></div><div><strong>1.</strong> Linear Frequency Modulated Pulse in an Oceanic Waveguide</div></li>
+            <li class="li"><div class=""></div><div><strong>2.</strong> Hanning Pulse in a Pekeris Waveguide </div></li>
+            <li class="li"><div class=""></div><div><strong>3.</strong> Continous Wave Pulse in a Munk Waveguide</div></li>
+            <li class="li"><div class=""></div><div><strong>4.</strong> Underwater Explosive Pulse in a Pekeris Waveguide</div></li>   
+        </ul>
+      <p class="muted">Note that the sound recordings have been normalised and thus do not represent the source or received amplitude, but they capture the reverberation.</p>
 
       <div class="example-block">
         <h3>1. Linear Frequency Modulated Pulse in an Oceanic Waveguide </h3>
@@ -138,7 +177,7 @@
       </div>
 
       <div class="example-block">
-        <h3>3. Underwater Explosive Pulse in a Pekeris Waveguide</h3>
+        <h3>4. Underwater Explosive Pulse in a Pekeris Waveguide</h3>
         <ul class="list"></ul>
             <li class="li"><div class="dot"></div><div><strong>Pulse type:</strong> 1000 g explosive charge (empircal equation)</div></li>
             <li class="li"><div class="dot"></div><div><strong>Pulse duration:</strong> 4 buble periods (~0.3 s)</div></li>
@@ -168,7 +207,7 @@
     </section>
 
     <section class="section" id="references">
-      <div class="h"><div class="num">4</div><span>References</span></div>
+      <div class="h"><div class="num">6</div><span>References</span></div>
       <ul class="refs">
         <li>Jensen, Finn B., et al. <em>Computational Ocean Acoustics</em>. Springer, 2011.</li>
         <li>Porter, Michael B. <em>The KRAKEN Normal Mode Program</em>. 1992.</li>
