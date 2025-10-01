@@ -14,5 +14,5 @@ Some Pretty Pictures:
 <p align="center">
   <img src="assets/lfm_prop_ow.png" alt="Fixed frequency propagation" width="600"/>
 </p>
-<p align="center"><i>Figure 2: Fixed frequency propagation in a realistic range dependent ocean waveguide using the bellhop ray tracing mode, GEBCO bathymetry, and Copernicus sound speed profiles.</i></p>
+<p align="center"><i>Figure 2: Fixed frequency propagation in a realistic range dependent ocean waveguide using the bellhop ray tracing model, GEBCO bathymetry, and Copernicus sound speed profiles.</i></p>
 
