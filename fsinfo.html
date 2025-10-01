@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Underwater Acoustic Time Series via Fourier Synthesis — Infographic</title>
+  <style>
+    :root{
+      --ink:#0f172a; --muted:#475569; --bg:#f8fafc; --panel:#ffffff; --accent:#0ea5e9; --accent-2:#8b5cf6; --ring:#bae6fd; --shadow:0 8px 24px rgba(2,6,23,.08);
+      --radius:18px; --gap:22px; --width:980px;
+    }
+    body{ margin:0; background:linear-gradient(180deg,#f8fafc 0%,#f3f4f6 100%); color:var(--ink); font:16px/1.6 ui-sans-serif,system-ui; }
+    .wrap{ max-width:var(--width); margin:28px auto 48px; padding:0 16px; }
+    .mast{ background: radial-gradient(900px 200px at 20% 0%, rgba(14,165,233,.18), transparent 60%), radial-gradient(600px 260px at 90% 20%, rgba(139,92,246,.14), transparent 60%), var(--panel);
+      border:1px solid #e5e7eb; border-radius:24px; box-shadow:var(--shadow); padding:28px; }
+    .kicker{ font-weight:700; color:var(--accent); text-transform:uppercase; font-size:12px; }
+    .title{ font-size:clamp(28px,4.5vw,44px); font-weight:900; margin:6px 0; }
+    .subtitle{ color:var(--muted); }
+    .section{ background:var(--panel); border:1px solid #e5e7eb; border-radius:var(--radius); box-shadow:var(--shadow); padding:22px; margin-top:var(--gap); }
+    .h{ display:flex; align-items:center; gap:14px; margin:0 0 12px; }
+    .num{ width:36px; height:36px; border-radius:10px; background:linear-gradient(135deg,var(--accent),var(--accent-2)); color:#fff; display:grid; place-items:center; font-weight:800; }
+    .h span{ font-size:clamp(18px,2vw,24px); font-weight:800; }
+    .list{ list-style:none; margin:0; padding:0; display:grid; gap:10px; }
+    .li{ display:grid; grid-template-columns:28px 1fr; gap:10px; }
+    .dot{ width:10px; height:10px; border-radius:50%; background:var(--accent); margin-top:8px; box-shadow:0 0 0 5px var(--ring); }
+    .muted{ color:var(--muted); }
+    .process{ background:linear-gradient(180deg,#f0f9ff,#eef2ff); border:1px dashed #dbeafe; border-radius:14px; padding:14px; }
+    .pipe{ display:flex; flex-wrap:wrap; gap:10px; font-weight:700; }
+    .pill{ padding:6px 12px; border-radius:999px; background:white; border:1px solid #dbeafe; }
+    figure{ margin:0; background:#fff; border:1px solid #e5e7eb; border-radius:14px; padding:10px; }
+    figure img{ width:100%; border-radius:10px; }
+    figure figcaption{ font-size:12px; color:var(--muted); margin-top:6px; }
+    .example-block{ margin-top:16px; background:#fafafa; border:1px solid #e5e7eb; border-radius:14px; padding:16px; }
+    .example-block h3{ margin-top:0; font-size:18px; color:var(--accent); }
+    .media-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap:12px; margin-top:10px; }
+    audio{ width:100%; margin-top:8px; }
+    .links{ margin-top:8px; }
+    .links a{ font-size:13px; margin-right:12px; color:var(--ink); text-decoration:none; border-bottom:1px dotted #94a3b8; }
+    .refs{ font-size:14px; color:var(--muted); }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="mast">
+      <!-- <div class="kicker">Infographic • Fourier Synthesis</div> -->
+      <h1 class="title">Underwater Acoustic Time Series Simulation using Fourier Synthesis</h1>
+      <p class="subtitle">Real sonar time series data is limited and hard to come by, therefor an accurate means to simulate it is crucial. This infographic contains further details, examples and a means to listen to the results.</p>
+    </header>
+
+    <section class="section" id="motivation">
+      <div class="h"><div class="num">1</div><span>Motivation</span></div>
+      <ul class="list">
+        <li class="li"><div class="dot"></div><div><strong>Algorithm testing</strong> — Beamforming, detection, and tracking operate on time‑domain signals.</div></li>
+        <li class="li"><div class="dot"></div><div><strong>Sonar performance</strong> — Time‑domain signals reveal pulse spreading and multipath arrivals.</div></li>
+        <li class="li"><div class="dot"></div><div><strong>Model inputs</strong> — Machine learning and matched filtering require realistic simulated time series.</div></li>
+      </ul>
+    </section>
+
+    <section class="section" id="advantages">
+      <div class="h"><div class="num">2</div><span>Advantages</span></div>
+      <ul class="list">
+        <li class="li"><div class="dot"></div><div><strong>Computational expense</strong> — Frequency‑domain modelling avoids direct time stepping.</div></li>
+        <li class="li"><div class="dot"></div><div><strong>Parallelism</strong> — Independent frequency components can be computed in parallel.</div></li>
+        <li class="li"><div class="dot"></div><div><strong>Solver agnostic</strong> — Works with any propagation model, e.g. ray tracing, normal modes, parabolic equation.</div></li>
+      </ul>
+    </section>
+
+    <section class="section" id="examples">
+      <div class="h"><div class="num">3</div><span>Examples</span></div>
+
+      <div class="example-block">
+        <h3>1. Linear Frequency Modulated Pulse in an Oceanic Waveguide </h3>
+        <ul class="list"></ul>
+            <li class="li"><div class="dot"></div><div><strong>Pulse type:</strong> Linear Frequency Modulated (active sonar chirp for range estimation)</div></li>
+            <li class="li"><div class="dot"></div><div><strong>Start frequency:</strong> 2250 Hz</div></li>
+            <li class="li"><div class="dot"></div><div><strong>End frequency:</strong> 2750 Hz</div></li>
+            <li class="li"><div class="dot"></div><div><strong>Pulse duration:</strong> 0.25 s</div></li>
+            <li class="li"><div class="dot"></div><div><strong>Environment:</strong> Real oceanic waveguide off the coast Scotland using GEBCO bathymetry and Copernicus derived sound speed</div></li>
+            <li class="li"><div class="dot"></div><div><strong>Source position & Receiver position:</strong> (0, 200) m & (60000, 100) m</div></li>
+            <li class="li"><div class="dot"></div><div><strong>Propagation model:</strong> Bellhop ray tracing</div></li>
+        </ul>
+        <p class="muted">Source time series:</p>
+        <audio controls src="assets/bell_ocean_LFM2250.0_source_time_series.wav"></audio>
+        <p class="muted">Received time series:</p>
+        <audio controls src="assets/received_ts_bell_lfm2250.0_ocean.wav"></audio>
+        <div class="media-grid">
+          <figure><img src="assets/lfm_src_ow.png" alt="Time series"/><figcaption>Source Time Series</figcaption></figure>
+          <figure><img src="assets/lfm_prop_ow.png" alt="PSD"/><figcaption>Fixed frequency Transmission Loss</figcaption></figure>
+          <figure><img src="assets/lfm_rcvd_ow.png" alt="Arrivals"/><figcaption>Received Time Series</figcaption></figure>
+        </div>
+        <!-- <div class="links"><a href="examples/example1.wav" download>Download WAV</a></div> -->
+      </div>
+
+      <div class="example-block">
+        <h3>2. Hanning Pulse in a Pekeris Waveguide </h3>
+        <ul class="list"></ul>
+            <li class="li"><div class="dot"></div><div><strong>Pulse type:</strong> Hanning</div></li>
+            <li class="li"><div class="dot"></div><div><strong>Center frequency:</strong> 50 Hz</div></li>
+            <li class="li"><div class="dot"></div><div><strong>Bandwidth:</strong> 25 Hz</div></li>
+            <li class="li"><div class="dot"></div><div><strong>Pulse duration:</strong> 4 wavelengths</div></li>
+            <li class="li"><div class="dot"></div><div><strong>Environment:</strong> Pekeris waveguide (constant 1500 m/s sound speed, 1600m/s acoustic bottom halfspace)</div></li>
+            <li class="li"><div class="dot"></div><div><strong>Source position & Receiver position:</strong> (0, 25) m & (30000, 20) m</div></li>
+            <li class="li"><div class="dot"></div><div><strong>Propagation model:</strong> Kraken normal mode program</div></li>
+        </ul>
+        <p class="muted">Source time series:</p>
+        <audio controls src="assets/hann50_source_time_series.wav"></audio>
+        <p class="muted">Received time series:</p>
+        <audio controls src="assets/hann50_received_time_series.wav"></audio>
+        <div class="media-grid">
+          <figure><img src="assets/source_krak_hann50_pek.png" alt="Time series"/><figcaption>Source Time Series</figcaption></figure>
+          <figure><img src="assets/kraken_pekeris_tl(3).png" alt="PSD"/><figcaption>Fixed frequency Transmission Loss</figcaption></figure>
+          <figure><img src="assets/received_krak_hann50_pek.png" alt="Arrivals"/><figcaption>Received Time Series</figcaption></figure>
+        </div>
+        <!-- <div class="links"><a href="examples/example1.wav" download>Download WAV</a></div> -->
+      </div>
+
+      <div class="example-block">
+        <h3>3. Continous Wave Pulse in a Munk Waveguide</h3>
+        <ul class="list"></ul>
+            <li class="li"><div class="dot"></div><div><strong>Pulse type:</strong> Continous wave (active sonar ping for doppler estimation)</div></li>
+            <li class="li"><div class="dot"></div><div><strong>Center frequency:</strong> 2000 Hz</div></li>
+            <li class="li"><div class="dot"></div><div><strong>Pulse duration:</strong> 0.1 s</div></li>
+            <li class="li"><div class="dot"></div><div><strong>Environment:</strong> Munk waveguide (Munk sound speed profile, 1600m/s acoustic bottom halfspace)</div></li>
+            <li class="li"><div class="dot"></div><div><strong>Source position & Receiver position:</strong> (0, 1000) m & (60000, 1000) m</div></li>
+            <li class="li"><div class="dot"></div><div><strong>Propagation model:</strong> Bellhop ray tracing</div></li>
+        </ul>
+        <p class="muted">Source time series:</p>
+        <audio controls src="assets/bell_munk_CW2000.0_source_time_series.wav"></audio>
+        <p class="muted">Received time series:</p>
+        <audio controls src="assets/bell_munk_CW2000.0_received_time_series.wav"></audio>
+        <div class="media-grid">
+          <figure><img src="assets/source_bell_cw2000.0_munk.png" alt="Time series"/><figcaption>Source Time Series</figcaption></figure>
+          <figure><img src="assets/bell_munk_tl_2d_2000.0.png" alt="PSD"/><figcaption>Fixed frequency Transmission Loss</figcaption></figure>
+          <figure><img src="assets/.png" alt="Arrivals"/><figcaption>Received Time Series</figcaption></figure>
+        </div>
+        <!-- <div class="links"><a href="examples/example1.wav" download>Download WAV</a></div> -->
+      </div>
+
+      <div class="example-block">
+        <h3>3. Underwater Explosive Pulse </h3>
+        <ul class="list"></ul>
+            <li class="li"><div class="dot"></div><div><strong>Pulse type:</strong> Explosive Charge (empircal equation)</div></li>
+            <li class="li"><div class="dot"></div><div><strong>Pulse duration:</strong> 4 wavelengths</div></li>
+            <li class="li"><div class="dot"></div><div><strong>Environment:</strong> Pekeris Waveguide (constant 1500 m/s sound speed, 1600m/s acoustic bottom halfspace)</div></li>
+            <li class="li"><div class="dot"></div><div><strong>Source position & Receiver position:</strong> (0, 25) m & (30000, 20) m</div></li>
+            <li class="li"><div class="dot"></div><div><strong>Propagation model:</strong> Kraken normal mode program</div></li>
+        </ul>
+        <p class="muted">Source time series:</p>
+        <audio controls src="assets/g.wav"></audio>
+        <p class="muted">Received time series:</p>
+        <audio controls src="assets/g.wav"></audio>
+        <div class="media-grid">
+          <figure><img src="assets/g.png" alt="Time series"/><figcaption>Source Time Series</figcaption></figure>
+          <figure><img src="assets/g.png" alt="PSD"/><figcaption>Fixed frequency Transmission Loss</figcaption></figure>
+          <figure><img src="assets/g.png" alt="Arrivals"/><figcaption>Received Time Series</figcaption></figure>
+        </div>
+        <!-- <div class="links"><a href="examples/example1.wav" download>Download WAV</a></div> -->
+      </div>
+
+    </section>
+
+    <section class="section" id="conclusion">
+        <div class="h"><div class="num">5</div><span>Conclusion</span></div>
+        <p>
+            Fourier synthesis enables realistic simulation of underwater acoustic time series, supporting algorithm development and performance analysis. By leveraging frequency-domain models and propagation solvers, researchers can generate diverse scenarios for sonar applications, overcoming data scarcity and facilitating robust testing.
+        </p>
+    </section>
+
+    <section class="section" id="references">
+      <div class="h"><div class="num">4</div><span>References</span></div>
+      <ul class="refs">
+        <li>Jensen, Finn B., et al. <em>Computational Ocean Acoustics</em>. Springer, 2011.</li>
+        <li>Porter, Michael B. <em>The KRAKEN Normal Mode Program</em>. 1992.</li>
+        <li>Porter, Michael B. "The Bellhop Manual and User’s Guide: Preliminary Draft." Tech. Rep. 260, 2011.</li>
+        <li>Wakeley, Joseph. "Pressure-signature model for an underwater explosive charge." US Navy journal of Underwater Acoustics 27.2 (1977): 445-449.</li>
+
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
