@@ -124,6 +124,7 @@
             <li class="li"><div class="dot"></div><div><strong>Source position & Receiver position:</strong> (0, 1000) m & (60000, 1000) m</div></li>
             <li class="li"><div class="dot"></div><div><strong>Propagation model:</strong> Bellhop ray tracing</div></li>
         </ul>
+        <p class="muted">Warning! High frequency tone can hurt. Play with caution.</p>
         <p class="muted">Source time series:</p>
         <audio controls src="assets/bell_munk_CW2000.0_source_time_series.wav"></audio>
         <p class="muted">Received time series:</p>
@@ -131,28 +132,28 @@
         <div class="media-grid">
           <figure><img src="assets/source_bell_cw2000.0_munk.png" alt="Time series"/><figcaption>Source Time Series</figcaption></figure>
           <figure><img src="assets/bell_munk_tl_2d_2000.0.png" alt="PSD"/><figcaption>Fixed frequency Transmission Loss</figcaption></figure>
-          <figure><img src="assets/.png" alt="Arrivals"/><figcaption>Received Time Series</figcaption></figure>
+          <figure><img src="assets/received_bell_cw2000.0_munk.png" alt="Arrivals"/><figcaption>Received Time Series</figcaption></figure>
         </div>
         <!-- <div class="links"><a href="examples/example1.wav" download>Download WAV</a></div> -->
       </div>
 
       <div class="example-block">
-        <h3>3. Underwater Explosive Pulse </h3>
+        <h3>3. Underwater Explosive Pulse in a Pekeris Waveguide</h3>
         <ul class="list"></ul>
-            <li class="li"><div class="dot"></div><div><strong>Pulse type:</strong> Explosive Charge (empircal equation)</div></li>
-            <li class="li"><div class="dot"></div><div><strong>Pulse duration:</strong> 4 wavelengths</div></li>
+            <li class="li"><div class="dot"></div><div><strong>Pulse type:</strong> 1000 g Explosive Charge (empircal equation)</div></li>
+            <li class="li"><div class="dot"></div><div><strong>Pulse duration:</strong> 4 buble periods (~0.3 s)</div></li>
             <li class="li"><div class="dot"></div><div><strong>Environment:</strong> Pekeris Waveguide (constant 1500 m/s sound speed, 1600m/s acoustic bottom halfspace)</div></li>
             <li class="li"><div class="dot"></div><div><strong>Source position & Receiver position:</strong> (0, 25) m & (30000, 20) m</div></li>
             <li class="li"><div class="dot"></div><div><strong>Propagation model:</strong> Kraken normal mode program</div></li>
         </ul>
         <p class="muted">Source time series:</p>
-        <audio controls src="assets/g.wav"></audio>
+        <audio controls src="assets/ux8000_source_time_series.wav"></audio>
         <p class="muted">Received time series:</p>
-        <audio controls src="assets/g.wav"></audio>
+        <audio controls src="assets/ux8000_received_time_series.wav"></audio>
         <div class="media-grid">
-          <figure><img src="assets/g.png" alt="Time series"/><figcaption>Source Time Series</figcaption></figure>
-          <figure><img src="assets/g.png" alt="PSD"/><figcaption>Fixed frequency Transmission Loss</figcaption></figure>
-          <figure><img src="assets/g.png" alt="Arrivals"/><figcaption>Received Time Series</figcaption></figure>
+          <figure><img src="assets/source_krak_ux250.0_pek.png" alt="Time series"/><figcaption>Source Time Series</figcaption></figure>
+          <figure><img src="assets/kraken_pekeris_tl(3).png" alt="PSD"/><figcaption>Fixed frequency Transmission Loss</figcaption></figure>
+          <figure><img src="assets/received_krak_ux250.0_pek.png" alt="Arrivals"/><figcaption>Received Time Series</figcaption></figure>
         </div>
         <!-- <div class="links"><a href="examples/example1.wav" download>Download WAV</a></div> -->
       </div>
@@ -162,7 +163,7 @@
     <section class="section" id="conclusion">
         <div class="h"><div class="num">5</div><span>Conclusion</span></div>
         <p>
-            Fourier synthesis enables realistic simulation of underwater acoustic time series, supporting algorithm development and performance analysis. By leveraging frequency-domain models and propagation solvers, researchers can generate diverse scenarios for sonar applications, overcoming data scarcity and facilitating robust testing.
+            Fourier synthesis enables realistic simulation of underwater acoustic time series, supporting algorithm development and performance analysis. By leveraging frequency-domain models in parrallel, efficient and accurate time-domain signals can be generated for various sonar applications. Hopefully the examples above demonstrate the dramatic effects of reverberation and multipath in underwater acoustics, and the need for accurate simulation.
         </p>
     </section>
 
