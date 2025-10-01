@@ -2,7 +2,7 @@
 
 This is an infographic about using fourier synthesis to produce accurate time series from efficient fixed frequency modelling.
 
-Infographic: https://fincb.github.io/fsinfo/fsinfo.html
+Infographic: [https://fincb.github.io/fsinfo/fsinfo.html](https://fincb.github.io/fsinfo/fsinfo.html?ts=1)
 
 Some Pretty Pictures:
 
