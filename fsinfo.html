@@ -74,7 +74,7 @@
         </p>
         <ul class="list">
             <li class="li"><div class=""></div><div>
-                <strong>Step 1:</strong> Apply Fourier transform to the source time series to obtain its frequency components <em>S(f)</em>.
+                <strong>Step 1:</strong> Apply Fourier transform to the source time series to obtain it's frequency components <em>S(f)</em>.
             </div></li>
             <li class="li"><div class=""></div><div>
                 <strong>Step 2:</strong> For each frequency, compute pressure <em>H(f)</em> using an acoustic model.
@@ -109,7 +109,7 @@
             <li class="li"><div class=""></div><div><strong>3.</strong> Continous Wave Pulse in a Munk Waveguide</div></li>
             <li class="li"><div class=""></div><div><strong>4.</strong> Underwater Explosive Pulse in a Pekeris Waveguide</div></li>   
         </ul>
-      <p class="muted">Note that the sound recordings have been normalised and thus do not represent the source or received amplitude, but they capture the reverberation.</p>
+      <p class="muted">Note that the sound recordings have been normalised and thus do not represent the source or received amplitude, but they do capture the reverberation effects.</p>
 
       <div class="example-block">
         <h3>1. Linear Frequency Modulated Pulse in an Oceanic Waveguide </h3>
@@ -128,7 +128,7 @@
         <audio controls src="assets/received_ts_bell_lfm2250.0_ocean.wav"></audio>
         <div class="media-grid">
           <figure><img src="assets/lfm_src_ow.png" alt="Time series"/><figcaption>Source Time Series</figcaption></figure>
-          <figure><img src="assets/lfm_prop_ow.png" alt="PSD"/><figcaption>Fixed frequency Transmission Loss</figcaption></figure>
+          <figure><img src="assets/lfm_prop_ow.png" alt="PSD"/><figcaption>Fixed Frequency Transmission Loss</figcaption></figure>
           <figure><img src="assets/lfm_rcvd_ow.png" alt="Arrivals"/><figcaption>Received Time Series</figcaption></figure>
         </div>
         <!-- <div class="links"><a href="examples/example1.wav" download>Download WAV</a></div> -->
@@ -151,7 +151,7 @@
         <audio controls src="assets/hann50_received_time_series.wav"></audio>
         <div class="media-grid">
           <figure><img src="assets/source_krak_hann50_pek.png" alt="Time series"/><figcaption>Source Time Series</figcaption></figure>
-          <figure><img src="assets/kraken_pekeris_tl(3).png" alt="PSD"/><figcaption>Fixed frequency Transmission Loss</figcaption></figure>
+          <figure><img src="assets/kraken_pekeris_tl(3).png" alt="PSD"/><figcaption>Fixed Frequency Transmission Loss</figcaption></figure>
           <figure><img src="assets/received_krak_hann50_pek.png" alt="Arrivals"/><figcaption>Received Time Series</figcaption></figure>
         </div>
         <!-- <div class="links"><a href="examples/example1.wav" download>Download WAV</a></div> -->
@@ -167,14 +167,14 @@
             <li class="li"><div class="dot"></div><div><strong>Source position & Receiver position:</strong> (0, 1000) m & (60000, 1000) m</div></li>
             <li class="li"><div class="dot"></div><div><strong>Propagation model:</strong> Bellhop ray tracing</div></li>
         </ul>
-        <p class="muted">Warning! High frequency tone can hurt. Play with caution.</p>
+        <!-- <p class="muted">Warning! High frequency tone can hurt. Play with caution.</p> -->
         <p class="muted">Source time series:</p>
         <audio controls src="assets/bell_munk_CW2000.0_source_time_series.wav"></audio>
         <p class="muted">Received time series:</p>
         <audio controls src="assets/bell_munk_CW2000.0_received_time_series.wav"></audio>
         <div class="media-grid">
           <figure><img src="assets/source_bell_cw2000.0_munk.png" alt="Time series"/><figcaption>Source Time Series</figcaption></figure>
-          <figure><img src="assets/bell_munk_tl_2d_2000.0.png" alt="PSD"/><figcaption>Fixed frequency Transmission Loss</figcaption></figure>
+          <figure><img src="assets/bell_munk_tl_2d_2000.0.png" alt="PSD"/><figcaption>Fixed Frequency Transmission Loss</figcaption></figure>
           <figure><img src="assets/received_bell_cw2000.0_munk.png" alt="Arrivals"/><figcaption>Received Time Series</figcaption></figure>
         </div>
         <!-- <div class="links"><a href="examples/example1.wav" download>Download WAV</a></div> -->
@@ -195,7 +195,7 @@
         <audio controls src="assets/ux8000_received_time_series.wav"></audio>
         <div class="media-grid">
           <figure><img src="assets/source_krak_ux250.0_pek.png" alt="Time series"/><figcaption>Source Time Series</figcaption></figure>
-          <figure><img src="assets/kraken_pekeris_tl(3).png" alt="PSD"/><figcaption>Fixed frequency Transmission Loss</figcaption></figure>
+          <figure><img src="assets/kraken_pekeris_tl(3).png" alt="PSD"/><figcaption>Fixed Frequency Transmission Loss</figcaption></figure>
           <figure><img src="assets/received_krak_ux250.0_pek.png" alt="Arrivals"/><figcaption>Received Time Series</figcaption></figure>
         </div>
         <!-- <div class="links"><a href="examples/example1.wav" download>Download WAV</a></div> -->
@@ -206,7 +206,7 @@
     <section class="section" id="conclusion">
         <div class="h"><div class="num">5</div><span>Conclusion</span></div>
         <p>
-            Fourier synthesis enables realistic simulation of underwater acoustic time series, supporting algorithm development and performance analysis. By leveraging efficient frequency-domain models in parrallel accurate time-domain signals can be generated for various sonar applications. Hopefully the examples above demonstrate the dramatic effects of reverberation and multipath in underwater acoustics, and the need for accurate simulation.
+            Fourier synthesis enables realistic simulation of underwater acoustic time series, supporting algorithm development and performance analysis. By leveraging efficient frequency-domain models in parallel, accurate time-domain signals can be generated for various sonar applications. Hopefully the examples above demonstrate the dramatic effects of reverberation and multipath in underwater acoustics, and the need for accurate simulation.
         </p>
     </section>
 
