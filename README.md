@@ -4,7 +4,7 @@ This is an infographic about using fourier synthesis to produce accurate time se
 
 Infographic: [https://fincb.github.io/fsinfo/fsinfo.html](https://fincb.github.io/fsinfo/fsinfo.html?ts=1)
 
-Some Pretty Pictures:
+Some pretty pictures:
 
 <p align="center">
   <img src="assets/received_krak_hann50_pek.png" alt="Received time series" width="600"/>
